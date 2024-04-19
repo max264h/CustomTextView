@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -91,6 +92,33 @@ public class MainActivity extends AppCompatActivity {
         // 設定 Window 的參數並顯示 Dialog
         window.setAttributes(layoutParams);
         dialog.show();
+
+        ImageView image1 = dialog.findViewById(R.id.imageView);
+        ImageView image2 = dialog.findViewById(R.id.imageView2);
+        ImageView image3 = dialog.findViewById(R.id.imageView3);
+        ImageView image4 = dialog.findViewById(R.id.imageView4);
+        ImageView image5 = dialog.findViewById(R.id.imageView5);
+
+        image1.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "這是第一張圖片", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
+        image2.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "這是第二張圖片", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
+        image3.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "這是第三張圖片", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
+        image4.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "這是第四張圖片", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
+        image5.setOnClickListener(v -> {
+            Toast.makeText(MainActivity.this, "這是第五張圖片", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
     }
 
     public void touchMe(View view) {
